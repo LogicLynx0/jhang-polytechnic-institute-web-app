@@ -3,6 +3,7 @@ import "./globals.css";
 import '../index.css'
 import Footer from "@/components/ui/Footer";
 import Header from "@/components/ui/Header";
+import WhatsAppFloatButton from "@/components/common/WhatsAppFloatButton";
 
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         <Header />
         {children}
+        <WhatsAppFloatButton />
         <Footer />
       </body>
     </html>
