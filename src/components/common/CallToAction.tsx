@@ -7,7 +7,7 @@ const CallToAction = () => {
     <div>
         <section className="py-16 hero-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 zoom-in text-red-400">Ready to Start Your Journey?</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 zoom-in">Ready to Start Your Journey?</h2>
           <p className="text-xl mb-8 text-blue-100">
             Join thousands of successful graduates and transform your career today.
           </p>

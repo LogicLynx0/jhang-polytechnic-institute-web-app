@@ -1,6 +1,5 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/Accordion';
-import { ChevronDown } from 'lucide-react';
 
 interface FAQItem {
   question: string;
@@ -34,7 +33,6 @@ const FAQ = ({ title, subtitle, faqs }: FAQProps) => {
               <AccordionTrigger className="text-left hover:no-underline hover:text-primary transition-colors duration-300">
                 <div className="flex items-center justify-between w-full">
                   <span className="font-semibold text-gray-900">{faq.question}</span>
-                  <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" />
                 </div>
               </AccordionTrigger>
               <AccordionContent className="text-gray-600 pb-4 slide-in-left">

@@ -15,6 +15,7 @@ const Courses = () => {
         <CourseStats />
         <Disclaimer />
         <CoursesFilterSection />
+        <br /><br />
         <FAQ
           title="Frequently Asked Questions"
           subtitle="Common questions about our courses and enrollment process"
