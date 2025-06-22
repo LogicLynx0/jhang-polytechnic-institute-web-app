@@ -1,3 +1,4 @@
+import MapSection from "@/components/common/MapSection";
 import FAQ from "@/components/ui/FAQ";
 import { contactFAQs } from "@/lib/faqsData";
 import ContactPageBody from "@/pages/contact/ContactPageBody";
@@ -10,6 +11,8 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <ContactPageHeader />
         <ContactPageBody />
+        <MapSection bgColor={'white'} />
+        <br />
         <FAQ
           title="Frequently Asked Questions"
           subtitle="Quick answers to common questions about contacting us"

@@ -1,27 +1,27 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
-import { Award, Building2, GraduationCap, Shield } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 const ourAffiliationsArray = [
   {
     name: "PSDA",
     fullName: "Punjab Skill Development Authority",
-    icon: Building2,
+    icon: "/images/psda.png",
   },
   {
     name: "TEVTA",
     fullName: "Technical Education & Vocational Training Authority",
-    icon: GraduationCap,
+    icon: "/images/logo.jpeg",
   },
   {
     name: "PSDF",
     fullName: "Punjab Skills Development Fund",
-    icon: Award,
+    icon: "/images/psdf.png",
   },
   {
     name: "NAVTCC",
     fullName: "National Vocational & Technical Training Commission",
-    icon: Shield,
+    icon: "/images/navtcc.png",
   },
 ];
 
@@ -49,8 +49,14 @@ const OurAffiliations = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="pb-2">
-                  <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 icon-bounce">
-                    <affiliate.icon className="h-8 w-8 text-primary" />
+                  <div className="flex items-center justify-center mx-auto mb-3 icon-bounce">
+                    <Image
+                      src={affiliate.icon}
+                      alt={affiliate.name}
+                      width={60}
+                      height={60}
+                      className="object-contain"
+                    />
                   </div>
                   <CardTitle className="text-2xl font-bold text-primary">
                     {affiliate.name}

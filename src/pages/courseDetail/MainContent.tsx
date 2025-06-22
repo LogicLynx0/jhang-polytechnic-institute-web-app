@@ -12,7 +12,7 @@ const MainContent = ({course}: any) => {
   return (
     <div className="lg:col-span-2">
         <CourseDetailHeader course={course} />
-        <CourseImage />
+        <CourseImage course={course}/>
         <CourseStats course={course} />
         <CourseDescription course={course} />
         <CourseModules course={course} />

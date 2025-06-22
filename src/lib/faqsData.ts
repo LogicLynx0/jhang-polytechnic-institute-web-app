@@ -1,4 +1,4 @@
-import { faqShowGvtTechCourses, faqShowPvtSafetyCourses, faqShowPvtTechCourses, instituteTiming } from "./configrations";
+import { faqShowGvtTechCourses, faqShowPvtSafetyCourses, faqShowPvtTechCourses, instituteTiming, phoneNumber } from "./configrations";
 
  export const contactFAQs = [
     {
@@ -7,7 +7,7 @@ import { faqShowGvtTechCourses, faqShowPvtSafetyCourses, faqShowPvtTechCourses, 
     },
     {
       question: 'How quickly will I receive a response to my inquiry?',
-      answer: 'We aim to respond to all inquiries within 24 hours during business days. For urgent matters, you can call us directly at +92-47-1234567.'
+      answer: `We aim to respond to all inquiries within 24 hours during business days. For urgent matters, you can call us directly at ${phoneNumber}.`
     },
     {
       question: 'Can I visit the campus for a tour?',

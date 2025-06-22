@@ -36,7 +36,7 @@ const CourseCard = ({ id, title, category, description, duration, students, imag
       <CardHeader className="pb-4">
         <div className="aspect-video bg-gradient-to-br from-primary/10 to-primary/20 rounded-lg mb-4 flex items-center justify-center">
           {image ? (
-            <Image src={image} alt={title} className="w-full h-full object-cover rounded-lg" />
+            <Image src={image} alt={title} width={200} height={200} className="w-full h-full object-cover rounded-lg" />
           ) : (
             <Award className="h-12 w-12 text-primary" />
           )}

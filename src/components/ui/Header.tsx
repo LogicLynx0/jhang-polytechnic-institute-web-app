@@ -1,13 +1,14 @@
-'use client'
+'use client';
+
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useParams();
+  const pathname = usePathname();
 
   const navigation = [
     { name: 'Home', href: '/' },
@@ -16,10 +17,6 @@ const Header = () => {
     { name: 'Admissions', href: '/admissions' },
     { name: 'Contact', href: '/contact' },
   ];
-
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
 
   return (
     <header className="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300">
@@ -37,24 +34,28 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* ✅ Desktop Navigation with underline + active highlight */}
           <nav className="hidden md:flex space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`nav-link px-3 py-2 text-sm font-medium transition-all duration-300 relative ${
-                  isActive(item.href)
-                    ? 'text-primary border-b-2 border-primary'
-                    : 'text-gray-700 hover:text-primary hover:scale-105'
-                }`}
-              >
-                {item.name}
-                {!isActive(item.href) && (
-                  <span className="absolute inset-x-0 bottom-0 h-0.5 bg-primary scale-x-0 transition-transform duration-300 origin-left hover:scale-x-100"></span>
-                )}
-              </Link>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`relative inline-block px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                    isActive ? 'text-primary' : 'text-gray-700 hover:text-primary'
+                  } group`}
+                >
+                  {item.name}
+                  {/* underline span */}
+                  <span
+                    className={`absolute left-0 bottom-0 h-0.5 w-full origin-left transform transition-transform duration-300 ${
+                      isActive ? 'scale-x-100 bg-primary' : 'scale-x-0 bg-primary group-hover:scale-x-100'
+                    }`}
+                  ></span>
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -81,21 +82,24 @@ const Header = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t slide-in-left">
           <div className="px-2 pt-2 pb-3 space-y-1">
-            {navigation.map((item, index) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`block px-3 py-2 text-base font-medium transition-all duration-300 animate-fade-in ${
-                  isActive(item.href)
-                    ? 'text-primary bg-primary/10'
-                    : 'text-gray-700 hover:text-primary hover:bg-gray-50 hover:scale-105'
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
+            {navigation.map((item, index) => {
+              const isActive = pathname === item.href;
+              return (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`block px-3 py-2 text-base font-medium transition-all duration-300 animate-fade-in ${
+                    isActive
+                      ? 'text-primary bg-primary/10'
+                      : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
             <div className="px-3 py-2 animate-fade-in" style={{ animationDelay: '0.5s' }}>
               <Button asChild className="w-full hover-glow">
                 <Link href="/admissions">Apply Now</Link>

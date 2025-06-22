@@ -51,8 +51,7 @@ const ContactInformation = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">Office Hours</h3>
                     <div className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                      <p>Monday - Friday: {instituteTiming}</p>
-                      <p>Saturday: {instituteTiming}</p>
+                      <p>Monday - Saturday: {instituteTiming}</p>
                       <p>Sunday: Closed</p>
                     </div>
                   </div>
@@ -61,7 +60,7 @@ const ContactInformation = () => {
             </Card>
 
             {/* Map Placeholder */}
-            <Card className="card-hover hover:shadow-xl transition-all duration-300">
+            {/* <Card className="card-hover hover:shadow-xl transition-all duration-300">
               <CardContent className="p-0">
                 <div className="bg-gray-200 h-64 rounded-lg flex items-center justify-center">
                   <div className="text-center text-gray-500">
@@ -71,7 +70,7 @@ const ContactInformation = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </Card> */}
           </div>
   )
 }
