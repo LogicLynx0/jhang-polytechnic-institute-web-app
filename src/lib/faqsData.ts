@@ -1,7 +1,9 @@
+import { faqShowGvtTechCourses, faqShowPvtSafetyCourses, faqShowPvtTechCourses, instituteTiming } from "./configrations";
+
  export const contactFAQs = [
     {
       question: 'What are your office hours?',
-      answer: 'Our office is open Monday to Friday from 9:00 AM to 5:00 PM, and Saturday from 9:00 AM to 2:00 PM. We are closed on Sundays and public holidays.'
+      answer: `Our office is open Monday to Friday from ${instituteTiming}, and Saturday from ${instituteTiming}. We are closed on Sundays and public holidays.`
     },
     {
       question: 'How quickly will I receive a response to my inquiry?',
@@ -24,11 +26,11 @@
 export const aboutFAQs = [
     {
       question: 'What types of courses do you offer?',
-      answer: 'We offer Tech Courses (Graphics Design, Web Development, Digital Marketing, Mobile App Development) and Safety Courses (IOSH, NEBOSH). Government courses are currently unavailable pending approvals.'
+      answer: `We offer Tech Courses (${faqShowPvtTechCourses}) and Safety Courses (${faqShowPvtSafetyCourses}). Government courses are currently unavailable pending approvals.`
     },
     {
       question: 'Are your courses industry-recognized?',
-      answer: 'Yes, our courses are designed to meet industry standards. Safety courses provide international certifications (IOSH, NEBOSH), while tech courses include industry-relevant skills and portfolio development.'
+      answer: `Yes, our courses are designed to meet industry standards. Safety courses provide international certifications (${faqShowPvtSafetyCourses}), while tech courses include industry-relevant skills and portfolio development.`
     },
     {
       question: 'Do you provide job placement assistance?',
@@ -43,8 +45,8 @@ export const aboutFAQs = [
       answer: 'Yes, we offer multiple batches with morning, evening, and weekend options to accommodate working professionals and students.'
     },
     {
-      question: 'What about the Government courses (DAE programs)?',
-      answer: 'Government courses like DAE programs are currently unavailable due to policy changes and pending approvals. We focus on private courses that are available year-round.'
+      question: 'What about the Government courses ?',
+      answer: `Government courses like ${faqShowGvtTechCourses} are currently unavailable due to policy changes and pending approvals. We focus on private courses that are available year-round.`
     }
   ];
 
@@ -63,7 +65,7 @@ export const coursesFAQs = [
     },
     {
       question: 'What certification do I receive upon completion?',
-      answer: 'You receive industry-recognized certificates. Tech courses provide skill-based certificates, while Safety courses (IOSH, NEBOSH) provide international certifications recognized globally.'
+      answer: `You receive industry-recognized certificates. Tech courses provide skill-based certificates, while Safety courses (${faqShowPvtSafetyCourses}) provide international certifications recognized globally.`
     },
     {
       question: 'Do you provide job placement assistance?',
@@ -71,6 +73,6 @@ export const coursesFAQs = [
     },
     {
       question: 'What is the duration of courses?',
-      answer: 'Course duration varies: Tech courses range from 2-6 months, Safety courses are typically 1-3 months, and Government courses (when available) can be 1-3 years depending on the program.'
+      answer: 'Course duration varies: Tech courses range from 3-6 months, Safety courses are typically 1-3 months, and Government courses (when available) can be 3-6 months depending on the program.'
     }
 ];

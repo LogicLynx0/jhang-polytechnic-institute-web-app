@@ -1,4 +1,5 @@
 
+import { address, email, hrefNumber, locationClick, phoneNumber } from '@/lib/configrations';
 import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
@@ -50,18 +51,25 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
             <div className="space-y-3">
               <div className="flex items-start space-x-3 group cursor-pointer card-hover p-2 rounded transition-all duration-300 hover:bg-gray-800">
+                <a href={`${locationClick}`} className="flex items-center gap-2">
+
                 <MapPin className="h-5 w-5 text-primary mt-0.5 group-hover:scale-110 transition-transform duration-300 icon-bounce" />
                 <div>
-                  <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">Jhang, Punjab, Pakistan</p>
+                  <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">{address}</p>
                 </div>
+                </a>
               </div>
               <div className="flex items-center space-x-3 group cursor-pointer card-hover p-2 rounded transition-all duration-300 hover:bg-gray-800">
+                <a href={`tel:${hrefNumber}`} className="flex items-center gap-2">
                 <Phone className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300 icon-bounce" />
-                <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">+92-47-1234567</p>
+                <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">{phoneNumber}</p>
+                </a>
               </div>
               <div className="flex items-center space-x-3 group cursor-pointer card-hover p-2 rounded transition-all duration-300 hover:bg-gray-800">
+                <a href={`mailto:${email}`} className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-primary group-hover:scale-110 transition-transform duration-300 icon-bounce" />
-                <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">info@jhangpolytechnic.edu.pk</p>
+                <p className="text-sm text-gray-400 group-hover:text-white transition-colors duration-300">{email}</p>
+                </a>
               </div>
             </div>
           </div>

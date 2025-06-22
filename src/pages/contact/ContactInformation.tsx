@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card'
+import { address, instituteTiming, phoneNumber } from '@/lib/configrations'
 import { Clock, Mail, MapPin, Phone } from 'lucide-react'
 import React from 'react'
 
@@ -19,7 +20,7 @@ const ContactInformation = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">Address</h3>
-                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">Main Campus, Jhang, Punjab, Pakistan</p>
+                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">{address}</p>
                   </div>
                 </div>
 
@@ -29,7 +30,7 @@ const ContactInformation = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">Phone</h3>
-                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">+92-47-1234567</p>
+                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">{phoneNumber}</p>
                   </div>
                 </div>
 
@@ -39,7 +40,7 @@ const ContactInformation = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">Email</h3>
-                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">info@jhangpolytechnic.edu.pk</p>
+                    <p className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">{phoneNumber}</p>
                   </div>
                 </div>
 
@@ -50,8 +51,8 @@ const ContactInformation = () => {
                   <div>
                     <h3 className="font-semibold text-gray-900 group-hover:text-primary transition-colors duration-300">Office Hours</h3>
                     <div className="text-gray-600 group-hover:text-gray-800 transition-colors duration-300">
-                      <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                      <p>Saturday: 9:00 AM - 2:00 PM</p>
+                      <p>Monday - Friday: {instituteTiming}</p>
+                      <p>Saturday: {instituteTiming}</p>
                       <p>Sunday: Closed</p>
                     </div>
                   </div>
