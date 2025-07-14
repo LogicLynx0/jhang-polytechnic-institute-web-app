@@ -1,8 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Course } from "@/data/courses";
 import { BookOpen } from "lucide-react";
 import React from "react";
 
-const CourseDescription = ({ course }: any) => {
+interface Props {
+  course: Course; 
+}
+
+const CourseDescription = ({ course }: Props) => {
   return (
     <div>
       <Card className="mb-8">

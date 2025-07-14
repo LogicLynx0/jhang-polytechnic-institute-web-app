@@ -1,4 +1,7 @@
 import { getAvailableCourses } from "@/data/courses";
+import AdditionalInformation from "@/pages/admissionsPage/AdditionalInformation";
+import AdmissionProcess from "@/pages/admissionsPage/AdmissionProcess";
+import AdmissionsForm from "@/pages/admissionsPage/AdmissionsForm";
 import { Award, Clock, GraduationCap, Users } from "lucide-react";
 import React from "react";
 
@@ -7,11 +10,14 @@ const Admissions = () => {
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Admissions</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Admissions
+          </h1>
           <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Start your journey towards a successful career. Apply now for our industry-relevant courses 
-            and join thousands of successful graduates.
+            Start your journey towards a successful career. Apply now for our
+            industry-relevant courses and join thousands of successful
+            graduates.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
@@ -36,6 +42,17 @@ const Admissions = () => {
             <p className="text-sm opacity-90">Practical Training</p>
           </div>
         </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div>
+            <AdmissionsForm />
+          </div>
+          <div>
+            <AdmissionProcess />
+          </div>
+        </div>
+
+        <AdditionalInformation />
       </div>
     </div>
   );

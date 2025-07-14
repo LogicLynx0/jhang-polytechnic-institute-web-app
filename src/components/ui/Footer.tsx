@@ -1,6 +1,6 @@
 
 import { address, email, hrefNumber, locationClick, phoneNumber } from '@/lib/configrations';
-import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -74,40 +74,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        {/* Social Media & Bottom Bar */}
-        {/* <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <div className="flex space-x-4 mb-4 sm:mb-0">
-              <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 icon-bounce">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 icon-bounce">
-                <Instagram className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 icon-bounce">
-                <Linkedin className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 icon-bounce">
-                <Twitter className="h-6 w-6" />
-              </a>
-            </div>
-            <p className="text-sm text-gray-400">
-              © 2024 Jhang Polytechnic Institute. All rights reserved.
-            </p>
-          </div> */}
-
-          {/* Affiliates */}
-          {/* <div className="mt-6 pt-6 border-t border-gray-800">
-            <p className="text-sm text-gray-400 text-center mb-3">Affiliated with:</p>
-            <div className="flex justify-center space-x-8 text-xs text-gray-500">
-              <span className="hover:text-primary transition-colors duration-300 cursor-pointer">PSDA</span>
-              <span className="hover:text-primary transition-colors duration-300 cursor-pointer">TEVTA</span>
-              <span className="hover:text-primary transition-colors duration-300 cursor-pointer">PSDF</span>
-              <span className="hover:text-primary transition-colors duration-300 cursor-pointer">NAVTCC</span>
-            </div>
-          </div> */}
-        {/* </div> */}
       </div>
     </footer>
   );

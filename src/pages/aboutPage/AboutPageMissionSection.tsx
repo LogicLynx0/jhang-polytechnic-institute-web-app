@@ -14,8 +14,8 @@ const AboutPageMissionSection = () => {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-gray-600">
-                To provide high-quality, industry-relevant technical education that empowers students with practical skills 
-                and knowledge needed for successful careers in today's competitive job market.
+                {`To provide high-quality, industry-relevant technical education that empowers students with practical skills 
+                and knowledge needed for successful careers in today's competitive job market.`}
               </p>
             </CardContent>
           </Card>

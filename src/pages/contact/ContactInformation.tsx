@@ -10,7 +10,7 @@ const ContactInformation = () => {
               <CardHeader>
                 <CardTitle className="text-2xl">Get in Touch</CardTitle>
                 <CardDescription>
-                  Multiple ways to reach us. We're here to help!
+                  {`Multiple ways to reach us. We're here to help!`}
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
