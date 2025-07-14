@@ -7,8 +7,13 @@ import CourseModules from './CourseModules'
 import CourseRequirements from './CourseRequirements'
 import CourseBenefits from './CourseBenefits'
 import UnavailableNote from './UnavailableNote'
+import { Course } from '@/data/courses'
 
-const MainContent = ({course}: any) => {
+interface Props {
+  course: Course; 
+}
+
+const MainContent = ({course}: Props) => {
   return (
     <div className="lg:col-span-2">
         <CourseDetailHeader course={course} />

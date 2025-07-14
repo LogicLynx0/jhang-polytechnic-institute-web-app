@@ -1,10 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
-import { getCategoryColor } from '@/lib/heplers'
+import { Course } from '@/data/courses'
 import { Separator } from '@radix-ui/react-select'
-import { Badge } from 'lucide-react'
 import React from 'react'
 
-const QuickInfo = ({course}) => {
+interface Props {
+  course: Course; 
+}
+
+const QuickInfo = ({course}: Props) => {
   return (
     <div>
         <Card>

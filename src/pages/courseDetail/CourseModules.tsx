@@ -5,10 +5,15 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/Card";
+import { Course } from "@/data/courses";
 import { CheckCircle, Target } from "lucide-react";
 import React from "react";
 
-const CourseModules = ({ course }) => {
+interface Props {
+  course: Course; 
+}
+
+const CourseModules = ({ course }: Props) => {
   return (
     <div>
       <Card className="mb-8">
@@ -17,7 +22,7 @@ const CourseModules = ({ course }) => {
             <Target className="h-5 w-5 mr-2" />
             Course Modules
           </CardTitle>
-          <CardDescription>What you'll learn in this course</CardDescription>
+          <CardDescription>{`What you'll learn in this course`}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

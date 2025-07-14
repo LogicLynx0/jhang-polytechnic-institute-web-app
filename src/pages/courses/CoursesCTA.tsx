@@ -7,7 +7,7 @@ const CoursesCTA = () => {
     <div className="text-center mt-16">
       <div className="bg-primary/5 rounded-lg p-8 card-hover hover:shadow-lg transition-all duration-300">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">
-          Can't find what you're looking for?
+          {`Can't find what you're looking for?`}
         </h2>
         <p className="text-gray-600 mb-6">
           Contact us to discuss custom training programs or get more information

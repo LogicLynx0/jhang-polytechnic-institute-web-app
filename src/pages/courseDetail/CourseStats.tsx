@@ -1,7 +1,12 @@
+import { Course } from "@/data/courses";
 import { Award, Clock, Users } from "lucide-react";
 import React from "react";
 
-const CourseStats = ({course}: any) => {
+interface Props {
+  course: Course; 
+}
+
+const CourseStats = ({course}: Props) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
       <div className="flex items-center space-x-3 p-4 bg-gray-50 rounded-lg">

@@ -14,7 +14,7 @@ const CourseBenefits = ({ course }) => {
       <Card className="mb-8">
         <CardHeader>
           <CardTitle>Course Benefits</CardTitle>
-          <CardDescription>What you'll gain from this course</CardDescription>
+          <CardDescription>{`What you'll gain from this course`}</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">

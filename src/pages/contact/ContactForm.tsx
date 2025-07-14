@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/Button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Input } from "@/components/ui/Input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
-import { Textarea } from "@/components/ui/Textarea";
 import { Send } from "lucide-react";
 import React, { useState } from "react";
 
@@ -31,8 +30,8 @@ const ContactForm = () => {
         <CardHeader>
           <CardTitle className="text-2xl">Send us a Message</CardTitle>
           <CardDescription>
-            Fill out the form below and we'll get back to you as soon as
-            possible.
+            {`Fill out the form below and we'll get back to you as soon as
+            possible.`}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -127,7 +126,7 @@ const ContactForm = () => {
               >
                 Message *
               </label>
-              <Textarea
+              <textarea
                 id="message"
                 required
                 rows={4}
